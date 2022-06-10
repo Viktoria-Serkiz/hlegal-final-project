@@ -1,0 +1,120 @@
+.main-menu {
+
+    &__list {
+        position: absolute;
+        right: 0;
+        top: 102px;
+        width: 360px;
+        list-style: none;
+        padding: 0;
+        background: $white;
+        border-radius: 12px 12px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 12px 12px 12px;
+        gap: 15px;
+        background-image: url(../img/close.svg);
+        background-repeat: no-repeat;
+        background-position: top 12px right 12px;
+        display: none;
+        &-item {
+            background: $greybg;
+            border-radius: 12px;
+            align-self: stretch;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: $blueregular;
+            cursor: pointer;
+            padding: 7px 107px;
+            &:active {
+                color: $pink;
+                background-color: $separator;
+            }
+        }
+    }
+    &__btn {
+        width: 18px;
+        height: 14px;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        &--about {
+            margin-right: -9px;
+        }
+    }
+    &__span {
+        display: block;
+        width: 100%;
+        background-color: $white;
+        height: 2px;
+        position: absolute;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+        &--about {
+            background-color: $mainregular;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-menu {
+
+        &__list {
+            position: static;
+            width: auto;
+            background-color: transparent;
+            border-radius: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-image: none;
+            width: auto;
+            padding: 0;
+            &-item {
+                background: transparent;
+                border-radius: none;
+                text-align: center;
+                padding: 0;
+                & a {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: right;
+                    color: $white;
+                    display: block;
+                    &:hover {
+                        color: $pink;
+                        border-bottom: 2px solid $pink
+                    }
+                }
+                &--about {
+                    & a {
+                        color: $blueregular;
+                    }
+                }
+            }
+        }
+        &__btn {
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .main-menu {
+        &__list {
+            justify-content: flex-end;
+        }
+    }
+}
+

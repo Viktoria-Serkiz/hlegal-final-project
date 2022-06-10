@@ -1,0 +1,93 @@
+.publications {
+    background-color: $greybg;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        background: $gradienttext;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+    &__article {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blueregular;
+            margin-bottom: 15px;
+        }
+        &-date {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $greytext;
+            margin-bottom: 15px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 22px;
+            color: $black;
+            padding-top: 15px;
+            border-top: 4px solid $separator;
+        }
+    }
+    &__image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+    &__info {
+        padding: 30px;
+        background-color: $white;
+        border-radius: 0 0 8px 8px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .publications {
+        padding-top: 32px;
+        padding-bottom: 29px;
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+            padding-top: 10px;
+            padding-bottom: 28px;
+        }
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+        }
+        &__info {
+            height: 100%;
+        }
+        &__article--third {
+            grid-column-start: -3;
+            grid-column-end: -1;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .publications {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__article--third {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+    }
+}

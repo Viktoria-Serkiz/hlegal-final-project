@@ -1,0 +1,166 @@
+.footer {
+    background-color: $greybg;
+    padding-bottom: 30px;
+    &__info {
+        border-top: 2px solid $separator;
+        padding: 30px;
+    }
+    &__adress {
+        text-align: center;
+        padding-bottom: 20px;
+        &-street {
+            font-size: 16px;
+            line-height: 20px;
+            color: $mainregular;
+            padding-bottom: 8px;
+        }
+        & a {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $blueregular;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & path:hover {
+            fill: $pink;
+            transition-duration: 1s;
+        }
+        &-tel {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: right;
+            color: $mainalt;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &-mail {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blueregular;
+            &:hover {
+                color: $pink;
+                transition-duration: 1s;
+            }
+        }
+    }
+    &__copyright {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: $greytext;
+        padding-top: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        &__info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content min-content;
+            row-gap: 14px;
+            padding: 33px 0 0 0;
+        }
+        &__adress {
+            display: flex;
+            position: relative;
+            align-items: baseline;
+            padding: 0;
+            &-street::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background: $greytext;
+                top: 7px;
+                left: 207px;
+                position: absolute;
+                border-radius: 50%;
+            }
+            & a {
+                padding-left: 18px;
+            }
+            &--about {
+                justify-self: center;
+                grid-column: 1 / 3;
+            }
+        }
+        &__contacts {
+            flex-direction: row;
+            grid-column: -3 / -1;
+            align-items: center;
+            position: relative;
+            &-tel {
+                padding: 0 25px 0;
+                &::before {
+                    content: '';
+                    background-image: url(../img/dot-separator.svg);
+                    width: 6px;
+                    height: 6px;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 15px;
+                    left: 46px;
+                }
+                &::after {
+                    content: '';
+                    background-image: url(../img/dot-separator.svg);
+                    width: 6px;
+                    height: 6px;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 15px;
+                    left: 176px;
+                }
+            }
+            &--about {
+                justify-self: center;
+            }
+        }
+        &__copyright {
+            padding-top: 0;
+            grid-column: 2 / 3;
+            grid-row: -2 / -3;
+            justify-self: flex-end;
+            &--about {
+                grid-column: 1 / 3;
+                grid-row: 3 / 4;
+                justify-self: center;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .footer {
+        &__adress {
+            &--about{
+                grid-column: 1 / 2;
+                justify-self: flex-start;
+            }
+        }
+        &__contacts {
+            &--about {
+                grid-column: -3 / -1;
+                justify-self: flex-start;
+            }
+        }
+        &__copyright {
+            &--about {
+                grid-column: 2 / 3;
+                grid-row: -2 / -3;
+                justify-self: flex-end;
+            }
+        }
+        &__info {
+            &--about {
+                padding-top: 31px;
+            }
+        }
+    }
+}

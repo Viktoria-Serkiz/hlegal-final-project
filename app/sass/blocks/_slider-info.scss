@@ -1,0 +1,103 @@
+.slider-info {
+    padding-top: 33px;
+    &__menu {
+        display: flex;
+        overflow: auto;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+        margin: 0 -30px;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        & button {
+            white-space: nowrap;
+            border: none;
+            background-color: transparent;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: $greytext;
+            cursor: pointer;
+            padding: 0 30px;
+            &:hover {
+                background: $gradienttext;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+    }
+    &__article {
+        padding-bottom: 30px;
+        border-top: 4px solid rgba(255, 255, 255, 0.3);
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $white;
+        padding-top: 46px;
+        padding-bottom: 30px;
+    }
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+        color: $white;
+    }
+}
+@media screen and (min-width: 768px){
+    .slider-info {
+        padding-top: 60px;
+        &__menu button {
+            font-size: 38px;
+            line-height: 46px;
+            margin-bottom: 45px;
+        }
+        &__article {
+            padding-bottom: 60px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 37px;
+            padding-top: 58px;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .slider-info {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 45px;
+        padding-top: 77px;
+        &__menu {
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 15px;
+            padding-right: 60px;
+            & button {
+                margin-bottom: 30px;
+            }
+        }
+        &__article {
+            padding-bottom: 0;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: none;
+            width: 52%;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: column;
+            height: 303px;
+        }
+        &__title {
+            padding-top: 10px;
+            padding-bottom: 31px;
+        }
+    }
+}
+@media screen and (min-width: 1320px) {
+    .slider-info {
+        &__article {
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 60px;
+    &__item {
+        padding: 0 8px;
+        &--about {
+            padding: 0 7px;
+        }
+    }
+    &__btn {
+        width: 16px;
+        height: 16px;
+        border: none;
+        font-size: 0;
+        background: $blueregular;
+        opacity: 0.2;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.6;
+            transition-duration: 0.7s;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+    &--about {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .dots {
+        &__item--about:nth-child(n+4) {
+            display: none;
+        }
+    }
+}

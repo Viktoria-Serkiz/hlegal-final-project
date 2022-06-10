@@ -1,0 +1,105 @@
+.partners {
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $mainregular;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $hillelbackground;
+        width: 100%;
+        height: 120px;
+        & img {
+            display: block;
+        }
+        &--wannabiz {
+            background-color: $wannabiz;
+        }
+        &--tapgerine {
+            background-color: $orange;
+        }
+        &--look {
+            background-color: $purple;
+        }
+        &--orangear {
+            background-color: $orangesecond;
+        }
+        &--adtelligent {
+            background-color: $adtelligent;
+        }
+        &--clickky {
+            background-color: $red;
+            display: none;
+        }
+        &--eco {
+            background-color: $skyblue;
+            display: none;
+        }
+        &--infatek {
+            background-color: $infatek;
+            display: none;
+        }
+        &--sitypark {
+            background-color: $darkpurple;
+            display: none;
+        }
+        &--artprint {
+            background-color: $artprint;
+            display: none;
+        }
+        &--ultimate {
+            background-color: $black;
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .partners {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__company {
+            width: 33.333%;
+            & img {
+                display: block;
+            }
+            &--clickky {
+                display: flex;
+            }
+            &--eco {
+                display: flex;
+            }
+            &--infatek {
+                display: flex;
+            }
+            &--sitypark {
+                display: flex;
+            }
+            &--artprint {
+                display: flex;
+            }
+            &--ultimate {
+                display: flex;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .partners {
+        &__company {
+            width: 25%;
+        }
+    }
+}

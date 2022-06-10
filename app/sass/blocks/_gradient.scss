@@ -1,0 +1,113 @@
+.gradient {
+    background: $supersoftgradient;
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    padding-bottom: 60px;
+    &::after {
+        content: '';
+        background: $greyafter;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        height: 10px;
+        bottom: -10px;
+    }
+    &::before {
+        content: '';
+        background-color: $greythin;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: -20px;
+        height: 10px;
+    }
+    &__logo {
+        background-image: url(../img/background.svg);
+        background-position: center top -90px;
+        background-repeat: no-repeat;
+        height: 600px;
+        margin: 0 -30px;
+        padding-right: 15px;
+        padding-left: 15px;
+        position: relative;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        text-align: center;
+        color: $white;
+        padding-top: 133px;
+    }
+    &__scroll {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        left: calc(50% - 42px/2 + 0.5px);
+        bottom: 13px;
+        &:hover circle {
+            stroke: $pink;
+            transition-duration: 1s;
+        }
+        &:hover path {
+            stroke: $pink;
+            transition-duration: 1s;
+            transform: translateY(2px);
+        }
+    }
+
+}
+@media screen and (min-width: 768px){
+    .gradient {
+        &__logo {
+            width: 893.28px;
+            height: 1024px;
+            margin: 0 -60px;
+            padding-right: 60px;
+            padding-left: 60px;
+            background-position: center left -63px;
+            background-size: cover;
+        }
+        &__title {
+            padding-top: 268px;
+            width: 800px;
+            height: 46px;
+            text-align: left;
+            margin-left: 50px;
+        }
+        &__scroll {
+            left: 38.85%;
+            top: 89.3%;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .gradient {
+        &__logo {
+            width: auto;
+            background-position: center top -175px;
+            height: 768px;
+        }
+        &__title {
+            padding-top: 252px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &__scroll {
+            left: 46.1%;
+            top: 88.3%;
+        }
+    }
+}
+@media screen and (min-width: 1320px) {
+    .gradient {
+        &__logo {
+            height: 799px;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+}
