@@ -14,10 +14,10 @@
         align-items: center;
         padding: 64px 12px 12px 12px;
         gap: 15px;
-        background-image: url(../img/close.svg);
-        background-repeat: no-repeat;
-        background-position: top 12px right 12px;
-        display: none;
+        transform: translateX(100%);
+        transition: all .4s ease;
+        opacity: 0;
+
         &-item {
             background: $greybg;
             border-radius: 12px;
@@ -26,13 +26,18 @@
             font-size: 24px;
             line-height: 29px;
             text-align: center;
-            color: $blueregular;
-            cursor: pointer;
             padding: 7px 107px;
-            &:active {
-                color: $pink;
-                background-color: $separator;
+            & a {
+                color: $blueregular;
+                cursor: pointer;
+                &:active {
+                    color: $pink;
+                }
             }
+        }
+        &.show {
+            transform: translateX(0%);
+            opacity: 1;
         }
     }
     &__btn {
@@ -44,6 +49,17 @@
         &--about {
             margin-right: -9px;
         }
+        &.show .main-menu__span:nth-child(1) {
+            transform-origin: top left;
+            transform: rotate(45deg);
+        }
+        &.show .main-menu__span:nth-child(2) {
+            transform: scale(0);
+        }
+        &.show .main-menu__span:nth-child(3) {
+            transform-origin: bottom left;
+            transform: rotate(-45deg);
+        }
     }
     &__span {
         display: block;
@@ -51,6 +67,7 @@
         background-color: $white;
         height: 2px;
         position: absolute;
+        transition: transform .3s ease;
         &:nth-child(1) {
             top: 0;
         }
@@ -81,6 +98,8 @@
             background-image: none;
             width: auto;
             padding: 0;
+            opacity: 1;
+            transform: translateX(0%);
             &-item {
                 background: transparent;
                 border-radius: none;
