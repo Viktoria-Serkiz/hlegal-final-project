@@ -22,7 +22,7 @@
             align-items: flex-start;
         }
         &-icon {
-            background-image: url(../img/Services/ecommerce.svg);
+            background-image: url(../img/services/ecommerce.svg);
             background-color: $white;
             width: 92px;
             height: 92px;
@@ -31,19 +31,19 @@
             border-radius: 24px;
             margin-bottom: 30px;
             &--support {
-                background-image: url(../img/Services/support.svg);
+                background-image: url(../img/services/support.svg);
             }
             &--corporate {
-                background-image: url(../img/Services/coprorate.svg);
+                background-image: url(../img/services/coprorate.svg);
             }
             &--relations {
-                background-image: url(../img/Services/trust.svg);
+                background-image: url(../img/services/trust.svg);
             }
             &--protection {
-                background-image: url(../img/Services/protection.svg);
+                background-image: url(../img/services/protection.svg);
             }
             &--judicial {
-                background-image: url(../img/Services/court.svg);
+                background-image: url(../img/services/court.svg);
             }
         }
         &-name {
