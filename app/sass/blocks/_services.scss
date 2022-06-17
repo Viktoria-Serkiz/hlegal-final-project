@@ -11,6 +11,9 @@
         background-clip: text;
         margin-top: 10px;
         margin-bottom: 30px;
+        &--services {
+            margin-top: 30px;
+        }
     }
     &__list {
         display: grid;
@@ -72,6 +75,9 @@
             font-size: 38px;
             line-height: 46px;
             margin-bottom: 60px;
+            &--services {
+                margin-top: 70px;
+            }
         }
     }
 }
@@ -80,6 +86,11 @@
         &__list {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: min-content min-content;
+        }
+        &__title {
+            &--services {
+                margin-top: 52px;
+            }
         }
     }
 }

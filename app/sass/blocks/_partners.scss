@@ -8,6 +8,10 @@
         color: $mainregular;
         text-align: center;
         padding-bottom: 30px;
+        &--services {
+            margin-top: 82px;
+            padding-bottom: 27px;
+        }
     }
     &__list {
         display: flex;
