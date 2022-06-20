@@ -4,6 +4,9 @@
     &__info {
         border-top: 2px solid $separator;
         padding: 30px;
+        &--team {
+            border: none;
+        }
     }
     &__adress {
         text-align: center;

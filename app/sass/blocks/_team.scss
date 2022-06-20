@@ -1,0 +1,118 @@
+.team {
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        background: $redtext;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 31px;
+    }
+    &__member {
+        margin-bottom: 30px;
+        justify-self: center;
+        &-photo {
+            padding-bottom: 15px;
+        }
+        &-photolist {
+            display: block;
+            border-radius: 12px;
+            object-fit: cover;
+            height: 300px;
+        }
+        &-description {
+            display: grid;
+            grid-template-columns: 1fr 32px;
+            grid-template-rows: min-content min-content;
+            row-gap: 5px;
+            width: 100%;
+        }
+        &-descriptionname {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $mainregular;
+        }
+        &-descriptionprofession {
+            font-size: 14px;
+            line-height: 22px;
+            color: $greytext;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        &-arrow {
+            grid-row: -3 / -1;
+            background: $greybg;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background: $greyalt;
+                transition-duration: 1.5s;
+            }
+        }
+        &-arrowsvg {
+            transform: rotate(-90deg);
+            &:hover path{
+                stroke: $pink;
+                transition-duration: 1.5s;
+                transform: translateX(10%);
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .team {
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+            margin-top: 63px;
+            margin-bottom: 60px;
+        }
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+        }
+        &__member {
+            margin-bottom: 60px;
+            &-photolist {
+                height: 400px;
+                width: 100%;
+            }
+            &-arrowsvg {
+                transform: rotate(0);
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .team {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__title {
+            margin-left: 120px;
+            margin-right: 120px;
+        }
+    }
+}
+@media screen and (min-width: 1320px) {
+    .team {
+        &__title {
+            margin-top: 67px;
+        }
+        &__list {
+            margin-bottom: 0;
+        }
+    }
+}
