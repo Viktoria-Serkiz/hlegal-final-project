@@ -6,7 +6,7 @@
     margin-bottom: 60px;
     &__item {
         padding: 0 8px;
-        &--about {
+        &--white {
             padding: 0 7px;
         }
     }
@@ -27,13 +27,13 @@
             opacity: 1;
         }
     }
-    &--about {
+    &--white {
         margin-bottom: 30px;
     }
 }
 @media screen and (min-width: 768px) {
     .dots {
-        &__item--about:nth-child(n+4) {
+        &__item--white:nth-child(n+4) {
             display: none;
         }
     }

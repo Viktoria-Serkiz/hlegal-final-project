@@ -63,7 +63,7 @@
         }
         &-arrowsvg {
             transform: rotate(-90deg);
-            &:hover path{
+            &:hover path {
                 stroke: $pink;
                 transition-duration: 1.5s;
                 transform: translateX(10%);

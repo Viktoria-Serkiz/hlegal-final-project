@@ -20,7 +20,7 @@ $('.js-achievements').slick({
   });
 const btn = document.querySelector('.main-menu__btn');
 const list = document.querySelector('.main-menu__list');
-const overlay = document.querySelector('.header__overlay');
+const overlay = document.querySelector('.overlay');
 const body = document.querySelector('.body');
 
 btn.addEventListener('click', menuToggle);
